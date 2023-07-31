@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game">
+
+    <FrameLayout
+        android:id="@+id/basketLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/basket"
+            android:src="@drawable/img_basket"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/symbolsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+
+    <com.basket.game.core.library.CustomImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/button_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/menuButton"
+        app:layout_constraintStart_toEndOf="@+id/menuButton"
+        app:layout_constraintTop_toTopOf="@+id/menuButton">
+
+        <ImageView
+            android:id="@+id/heart1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/img_heart_active" />
+
+        <ImageView
+            android:id="@+id/heart2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="3dp"
+            android:src="@drawable/img_heart_active" />
+
+        <ImageView
+            android:id="@+id/heart3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/img_heart_active" />
+
+    </LinearLayout>
+
+    <com.basket.game.core.library.CustomImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/button_options_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.basket.game.core.library.CustomImageButton
+        android:id="@+id/pauseButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/button_pause"
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scores"
+        style="@style/BasicText"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_text_scores"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2000" />
+
+    <ImageView
+        android:id="@+id/boardBottomLeft"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/img_long_board"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/boardBottomRight"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="80dp"
+        android:rotationY="180"
+        android:src="@drawable/img_long_board"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/boardTopLeft"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:src="@drawable/img_short_board"
+        app:layout_constraintBottom_toTopOf="@+id/boardBottomLeft"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/boardTopRight"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:rotationY="180"
+        android:src="@drawable/img_short_board"
+        app:layout_constraintBottom_toTopOf="@+id/boardBottomRight"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/buttonLeft"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_margin="30dp"
+        android:src="@drawable/button_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/buttonRight"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:rotationY="180"
+        android:src="@drawable/button_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLeft"
+        app:layout_constraintStart_toEndOf="@+id/buttonLeft" />
+
+    <ImageView
+        android:id="@+id/buttonDown"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:rotation="-90"
+        android:src="@drawable/button_arrow"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/buttonUp"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="30dp"
+        android:rotation="90"
+        android:src="@drawable/button_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDown"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

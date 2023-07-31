@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_dialog"
+        android:layout_height="300dp">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pause"
+            android:textSize="26sp"/>
+
+        <com.basket.game.core.library.CustomImageButton
+            android:id="@+id/button_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/button_play_small"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

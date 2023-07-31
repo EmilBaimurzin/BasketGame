@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BasketGame</string>
+    <string name="pause">Pause</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="scores">SCORES</string>
+    <string name="best_scores">BEST SCORES</string>
+    <string name="vibration">Vibration</string>
+    <string name="speed">speed</string>
+</resources>

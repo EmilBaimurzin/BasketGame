@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.basket.game.ui.main.FragmentMain"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+        <action
+            android:id="@+id/action_fragmentMain_to_dialogOptions"
+            app:destination="@id/dialogOptions" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGame"
+        android:name="com.basket.game.ui.game.FragmentGame"
+        android:label="FragmentGame" >
+        <action
+            android:id="@+id/action_fragmentGame_to_dialogEnd"
+            app:destination="@id/dialogEnd" />
+        <action
+            android:id="@+id/action_fragmentGame_to_dialogPause"
+            app:destination="@id/dialogPause" />
+        <action
+            android:id="@+id/action_fragmentGame_to_dialogOptions"
+            app:destination="@id/dialogOptions" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogEnd"
+        android:name="com.basket.game.ui.dialogs.DialogEnd"
+        android:label="DialogEnd" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogPause"
+        android:name="com.basket.game.ui.dialogs.DialogPause"
+        android:label="DialogPause" />
+    <dialog
+        android:id="@+id/dialogOptions"
+        android:name="com.basket.game.ui.dialogs.DialogOptions"
+        android:label="DialogOptions" />
+</navigation>
